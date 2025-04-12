@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Enable debug logging for HandlerMappings -->
+    <logger name="org.springframework.web.servlet.handler" level="DEBUG" />
+    <logger name="org.springframework.web.servlet.DispatcherServlet" level="DEBUG" />
+</configuration>
